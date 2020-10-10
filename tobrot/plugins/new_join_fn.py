@@ -22,7 +22,7 @@ from tobrot import (
 async def new_join_f(client, message):
     chat_type = message.chat.type
     if chat_type != "private":
-        await message.reply_text(f"Current CHAT ID: <code>{message.chat.id}</code> \nNot Designed For This Group Please Check @publicleech1", disable_web_page_preview=True)
+        await message.reply_text(f"Current CHAT ID: <code>{message.chat.id}</code> \nNot in private", disable_web_page_preview=True)
         # leave chat
         await client.leave_chat(
             chat_id=message.chat.id,
@@ -38,7 +38,7 @@ async def help_message_f(client, message):
     #message_id = 99
     # display the /help
     
-    await message.reply_text("Please Check Commands Below Before Using Me In This Group https://telegra.ph/Command-List-09-01", disable_web_page_preview=True)
+    await message.reply_text("Please Check Commands Below Before Using", disable_web_page_preview=True)
 
 
 async def rename_message_f(client, message):
